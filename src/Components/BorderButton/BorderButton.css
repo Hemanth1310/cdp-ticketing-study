@@ -1,0 +1,9 @@
+.BorderBlueText{
+    color: var(--primary-brand-color);
+    font-size:32px;
+    margin: 50px 0px;
+    padding: 30px 20px;
+    border: 2px solid var(--primary-brand-color);
+    border-radius: 30px;
+    cursor: pointer;
+}

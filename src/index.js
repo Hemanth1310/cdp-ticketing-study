@@ -3,12 +3,15 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import SecondPartFlagProvider from './Contexts/SecondPartFlag';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <SecondPartFlagProvider>
+       <App />
+  </SecondPartFlagProvider>
+   
+  
 );
 
 // If you want to start measuring performance in your app, pass a function
