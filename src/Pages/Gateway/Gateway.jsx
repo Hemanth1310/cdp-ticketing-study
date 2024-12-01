@@ -8,8 +8,8 @@ export const Gateway = () => {
 
    const onContinue=()=>{
     const urls = [
-        `https://deft-flight-booking-app.firebaseapp.com/${newUID}/fo`,
-        `https://studyr-flight-booking-app.web.app/${newUID}/fo`
+        `https://deft-flight-booking-app.firebaseapp.com/fo`,
+        `https://studyr-flight-booking-app.web.app/fo`
       ];
       const randomIndex = Math.random() > 0.5 ? 0 : 1;
       window.location.href = urls[randomIndex]; 
@@ -21,19 +21,16 @@ export const Gateway = () => {
         <h2>Task</h2>
         <p>  Thank you for your interest in taking part in our study.</p>
         <p> 
-            You will use two different flight booking apps to book this flight. As you interact with the apps, think about:
+          You will be provided with a persona and asked to use it to book a flight using the flight booking interface.
         </p>
-        <ul>
-            <li>How clear and easy the process is.</li>
-            <li>Whether the app feels trustworthy and straightforward.</li>
-            <li>If the app meets your needs without making you feel pressured or misled</li>
-        </ul>
-        <p>After using each app, you’ll answer a set of questions about your experience. 
+        <p>After completing the booking, you’ll answer a set of questions about your experience. 
         </p>
+        <p>Once you begin the task, you will not be able to return to the previous steps.</p>
+        <p>Please continue once you feel ready to proceed.</p>
         <p>Thank you for your participation!</p>
         </div>
         <p>{startPoint}</p>
-        <BorderButton onContinue={onContinue}>Click to Start First Interface</BorderButton>
+        <BorderButton onContinue={onContinue}>Proceed to the Task</BorderButton>
     </div>
   )
 }

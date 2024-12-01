@@ -164,7 +164,7 @@ export const Demographics = () => {
             {formData.experiencedDifficulties === "Yes" && (
                 <div >
                 <label className='text-area'>
-                    <p>If yes, please describe briefly: </p>
+                    <p>If yes, please briefly describe any challenges you encountered while booking a flight online: </p>
                     <textarea name="difficultiesDescription" value={formData.difficultiesDescription} onChange={handleChange}></textarea>
                 </label>
                 </div>

@@ -16,12 +16,8 @@ export const Intro = () => {
         <h2>Introduction</h2>
         <p>
             Thank you for your interest in taking part in our study. This research is part of a project investigating 
-            users’ experiences and perceptions of booking/ticketing interfaces. For the purpose of this study, we are comparing two flight booking applications:
+            users’ experiences and perceptions of booking/ticketing interfaces.
         </p>
-        <ul>
-            <li>A replica of a standard airline website interface.</li>
-            <li>A redesigned user-centric flight booking interface, proposed to enhance usability.</li>
-        </ul>
         </div>
 
         <div class="section">
@@ -35,16 +31,7 @@ export const Intro = () => {
 
         <div class="section">
             <h2>What You Will Be Asked to Do</h2>
-            <p>Participation involves engaging with two flight booking applications:</p>
-            <ul>
-                <li>
-                    <strong>Standard Airline Website:</strong> Interact with the replica of an existing interface to complete 
-                    a series of predefined tasks.
-                </li>
-                <li>
-                    <strong>Proposed Redesign:</strong> Use the redesigned application to perform the same tasks.
-                </li>
-            </ul>
+            <p>Participants are tasked with booking a flight using our flight booking applications, guided by the provided persona. The goal is to simulate a realistic booking scenario based on the user's preferences and needs outlined in the persona.</p>
             <p>
                 After completing the tasks, you will be asked to answer a series of questions related to your experience with 
                 each interface. These questions will assess parameters such as ease of use, trust, and perceived accountability of the systems.
@@ -54,9 +41,7 @@ export const Intro = () => {
         <div class="section">
             <h2>Data Collection and Uses</h2>
             <p>
-                During the study, we would collect your anonymized demographic details, task performance data, and your feedback on usability and trust. 
-                The data will be analyzed to draw insights into user preferences, usability, and the impact of interface design on flight booking experiences.
-            </p>
+            During the study, we will collect anonymized demographic details, task performance data, and feedback on usability and trust. This data will be used exclusively for research purposes as part of my master's thesis, aimed at gaining insights into user preferences, usability, and the impact of interface design on booking/ticketing experiences.</p>
         </div>
 
         <div class="section">
@@ -79,7 +64,7 @@ export const Intro = () => {
         <div class="section">
             <h2>Contact Information</h2>
             <p>
-                If you wish to withdraw or access data relevant to your participation, please contact  
+            If you wish to withdraw or access data relevant to your participation, or if you decide to stop the test at any point, you can do so without any penalty. Upon request, all data associated with your participation will be deleted. For any such inquiries Please contact   
                 <strong> Hemanth Kumar Halaharavi</strong> (<a href="mailto:hemanthk@uni-bremen.de">hemanthk@uni-bremen.de</a>).
             </p>
             <p>

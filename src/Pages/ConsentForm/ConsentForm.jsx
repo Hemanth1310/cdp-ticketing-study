@@ -9,7 +9,7 @@ export const ConsentForm = () => {
     const [name,setName] = useState()
     const navigate =  useNavigate();
 
-    const allConsentsChecked = consent1 && consent2 && consent3 && name? 'isConsentActive':'isConsentDisabled';
+    const allConsentsChecked = consent1 && consent2 && consent3 ? 'isConsentActive':'isConsentDisabled';
 
     const onSubmission=()=>{
         navigate('/Demographics')
@@ -67,10 +67,10 @@ export const ConsentForm = () => {
             </label>
         </div>
 
-        <div className='section declaration'>
+        {/* <div className='section declaration'>
            <b>Name:</b> 
             <input type='text' value={name} onChange={(e)=>setName(e.target.value)}></input>
-        </div>
+        </div> */}
 
         <div className="button-container">
             <button className={`blueButton ${allConsentsChecked}`} onClick={onSubmission}type="submit">Submit Consent</button>
