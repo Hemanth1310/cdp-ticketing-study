@@ -17,7 +17,7 @@ function App() {
         <Route path='/ConsentForm' element={<ConsentForm/>}></Route>
         <Route path='/Demographics' element={<Demographics></Demographics>}></Route>
         <Route path='/testGateway' element={<Gateway/>}></Route>
-        <Route path='/SecondPart/:id'element={<SecondPart/>}></Route>
+        <Route path='/SecondPart/:id/:uid/:spf'element={<SecondPart/>}></Route>
       </Routes>
      </BrowserRouter>
     </div>

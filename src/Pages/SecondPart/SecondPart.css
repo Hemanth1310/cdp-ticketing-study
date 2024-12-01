@@ -1,0 +1,43 @@
+.second-part {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+     font-size: 24px;
+    /* margin: 20px; */
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* text-align: left; */
+}
+.second-part h1,.second-part h2 {
+    color: #2c3e50;
+}
+
+.second-part-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.gateway p {
+    margin-bottom: 10px;
+}
+.gateway .section {
+    margin-bottom: 20px;
+}
+
+
+.BlueText{
+    color: var(--primary-brand-color);
+    font-size:32px;
+    margin: 50px 0px;
+    padding: 30px 20px;
+    border: 2px solid var(--primary-brand-color);
+    border-radius: 30px;
+    cursor: pointer;
+    text-align: none;
+    /* width: 300px; */
+}
+
+

@@ -1,11 +1,13 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import './Demographics.css'
-import { ref, set, push } from "firebase/database";
+import { ref, set, push,get } from "firebase/database";
 import { database } from '../../firebase.js';
 import { useNavigate } from 'react-router-dom';
+import { UserIDContext } from '../../Contexts/userIDContext.jsx';
 export const Demographics = () => {
 
     const navigate = useNavigate();
+    const {newUID,handleNewUser} = useContext(UserIDContext)
     const [errors,setErrors]=useState({})
     const [formData, setFormData] = useState({
         age: "",
@@ -36,7 +38,7 @@ export const Demographics = () => {
         return Object.keys(newErrors).length===0;
     }
 
-    const addBooking = async () => {
+    const addRecord = async () => {
         const demosRef = ref(database, 'demograpics-data'); // Reference to the 'bookings' node
         push(demosRef, formData)
           .then(() => {
@@ -45,17 +47,37 @@ export const Demographics = () => {
           .catch((error) => {
             console.error("Error pushing data: ", error);
           });
+         gentrateUserID(); 
       };
+    
+      const gentrateUserID = async () =>{
+        const demosRef =ref(database,'demograpics-data');
+        const snapshot = await get(demosRef);
+
+        try{if(snapshot.exists()){
+            const children = snapshot.val(); // Get the raw data as an object
+            const uid = Object.keys(children).length; 
+            console.log('newuid'+ uid)
+            handleNewUser('p'+uid) 
+        }else{
+            console.log('No user found')
+            handleNewUser('0') 
+        }}catch(e){
+            console.log('Error occured. No connection to DB'+ e );
+        }
+      }
     
     const handleSubmit = () => {
        if(validation())
         {
-            addBooking();
+            addRecord();
             console.log("Submitted Data:", formData);
             navigate('/testGateway')
         }
        
       };
+
+      
      
     
       return (

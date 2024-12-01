@@ -1,12 +1,15 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import './Gateway.css'
 import { BorderButton } from '../../Components/BorderButton/BorderButton'
+import { UserIDContext } from '../../Contexts/userIDContext';
 export const Gateway = () => {
     const [startPoint,setStartPoint] = useState();
+    const {newUID,handleNewUser} = useContext(UserIDContext)
+
    const onContinue=()=>{
     const urls = [
-        "https://deft-flight-booking-app.firebaseapp.com/",
-        "https://studyr-flight-booking-app.web.app/"
+        `https://deft-flight-booking-app.firebaseapp.com/${newUID}/fo`,
+        `https://studyr-flight-booking-app.web.app/${newUID}/fo`
       ];
       const randomIndex = Math.random() > 0.5 ? 0 : 1;
       window.location.href = urls[randomIndex]; 

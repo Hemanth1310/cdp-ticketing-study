@@ -4,27 +4,31 @@ import { useParams } from 'react-router-dom';
 import { BorderButton } from '../../Components/BorderButton/BorderButton';
 import { SecondPartFlag } from '../../Contexts/SecondPartFlag';
 export const SecondPart = () => {
-    const {id} = useParams();
-    const {spflagger,handleSecondPartFlag}= useContext(SecondPartFlag)
+    const {id,uid,spf} = useParams();
+    // const {spflagger,handleSecondPartFlag}= useContext(SecondPartFlag)
+    // const [occurance,setOccurance]=useState();
+    // const tstatus =  spf==='fod' ?'fo':'so'
     const onContinue=()=>{
-        if(!spflagger)handleSecondPartFlag(true);
+        
+        // if(spf==='fod')setOccurance(true);
+       
         if(id==='1'){
-            window.location.href = "https://deft-flight-booking-app.firebaseapp.com/"
+            window.location.href = `https://deft-flight-booking-app.firebaseapp.com/${uid}/so`
         }else if(id==='2'){
-             window.location.href = "https://studyr-flight-booking-app.web.app/"
+            window.location.href = `https://studyr-flight-booking-app.web.app/${uid}/so`
         }
     }
 
   return (
     <div className='second-part'>
-        {!spflagger? 
-        <div>
+        {spf==='fod'?
+        <div className='second-part-content'>
             <h1>Evaluating Booking/Ticketing Interfaces</h1>
             <div class="section">
-            <h2>Task</h2>
-            <p>  Thank you for your interest in taking part in our study.</p>
+            <h2>Task 2</h2>
+            <p> Please continue for the second part. </p>
             <p> 
-                You will use two different flight booking apps to book this flight. As you interact with the apps, think about:
+                You will use the next flight booking interface to book the flight. As you interact with the apps, think about:
             </p>
             <ul>
                 <li>How clear and easy the process is.</li>
@@ -35,7 +39,7 @@ export const SecondPart = () => {
             </p>
             <p>Thank you for your participation!</p>
             </div>
-            <BorderButton onContinue={onContinue}>Click to Start First Interface</BorderButton>
+            <BorderButton onContinue={onContinue}>Click to Start Second Interface</BorderButton>
         </div>:<div>
 
             <h1>Evaluating Booking/Ticketing Interfaces</h1>
